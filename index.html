@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Pengaturan dasar halaman dan tampilan responsif -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Gilang Arya Prasetyo, siswa Desain Komunikasi Visual.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Gilang Arya Prasetyo | Portfolio DKV</title>
+
+  <!-- Font untuk mendekati desain Figma: serif tebal pada judul dan sans-serif pada isi -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Menghubungkan file CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigasi utama -->
+  <header class="site-header" id="beranda">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a class="nav-link active" href="#beranda">Beranda</a>
+      <a class="nav-link" href="#tentang">Tentang</a>
+      <a class="nav-link" href="#karya">Karya</a>
+      <a class="nav-link" href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Bagian pembuka / hero -->
+    <section class="hero container">
+      <div class="hero-heading">
+        <p class="eyebrow">PORTOFOLIO • DESAIN KOMUNIKASI VISUAL</p>
+        <h1>Gilang Arya Prasetyo</h1>
+        <p class="hero-subtitle">Desain Komunikasi Visual</p>
+      </div>
+
+      <div class="hero-content">
+        <div class="intro-wrap">
+          <p class="intro-card">
+            Saya adalah seorang pelajar jurusan Desain Komunikasi Visual (DKV) yang tertarik pada dunia desain grafis, fotografi, dan editing. Saya senang belajar hal baru, mengembangkan kreativitas, dan meningkatkan kemampuan diri.
+          </p>
+          <a class="button button-dark" href="#tentang">Kenali Saya <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="portrait-frame">
+          <!-- Foto profil dari folder assets -->
+          <img src="assets/foto-gilang.jpeg" alt="Foto profil Gilang Arya Prasetyo">
+        </div>
+      </div>
+    </section>
+
+    <!-- Bagian tentang saya -->
+    <section class="about section-space" id="tentang">
+      <div class="container">
+        <div class="section-title"><h2>About Me</h2></div>
+        <div class="about-grid">
+          <div>
+            <p class="about-copy">
+              Aku suka membuat desain kreatif, mengedit foto dan video agar terlihat lebih menarik, serta mengembangkan ide menjadi karya visual yang unik. Aku juga memiliki ketertarikan pada dunia sepak bola, khususnya Persija Jakarta, serta otomotif dan desain motor.
+            </p>
+            <a class="button button-dark" href="#karya">Lihat Karya <span aria-hidden="true">↗</span></a>
+          </div>
+          <aside class="about-note">
+            <span class="note-mark">“</span>
+            <p>Ide sederhana bisa menjadi karya yang bermakna ketika disampaikan dengan visual yang tepat.</p>
+            <span class="note-caption">— Gilang Arya Prasetyo</span>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bagian keahlian -->
+    <section class="skills section-space" id="keahlian">
+      <div class="container">
+        <div class="section-title"><h2>My Skills</h2></div>
+        <p class="section-lead">Tools yang saya gunakan untuk mengembangkan ide menjadi karya visual.</p>
+        <div class="skill-list" aria-label="Daftar keahlian">
+          <span class="skill-chip">Adobe Illustrator</span>
+          <span class="skill-chip">Canva</span>
+          <span class="skill-chip">Figma</span>
+          <span class="skill-chip">CorelDRAW</span>
+          <span class="skill-chip">Adobe Photoshop</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bagian karya; kartu dapat diganti dengan proyek asli milik Gilang -->
+    <section class="works section-space" id="karya">
+      <div class="container">
+        <div class="section-title"><h2>Selected Works</h2></div>
+        <p class="section-lead">Beberapa kategori karya yang menjadi ruang eksplorasi kreatif saya.</p>
+        <div class="work-grid">
+          <article class="work-card work-red">
+            <span class="work-number">01 / VISUAL IDENTITY</span>
+            <div class="work-art identity-art"><span>G</span><i>DESIGN<br>STUDIO</i></div>
+            <h3>Identitas Visual</h3>
+            <p>Eksplorasi logo, warna, dan karakter sebuah brand.</p>
+          </article>
+          <article class="work-card work-cream">
+            <span class="work-number">02 / GRAPHIC DESIGN</span>
+            <div class="work-art poster-art"><b>MAKE<br>IT<br><em>LOUD.</em></b><small>IDEA INTO VISUAL</small></div>
+            <h3>Poster Kreatif</h3>
+            <p>Komposisi tipografi dan visual untuk menyampaikan pesan.</p>
+          </article>
+          <article class="work-card work-dark">
+            <span class="work-number">03 / DIGITAL ART</span>
+            <div class="work-art digital-art"><span>FORM</span><b>×</b><i>COLOR</i></div>
+            <h3>Eksplorasi Digital</h3>
+            <p>Eksperimen bentuk, warna, dan olah gambar digital.</p>
+          </article>
+        </div>
+        <p class="work-disclaimer">* Kartu di atas merupakan contoh tampilan kategori. Ganti dengan dokumentasi proyek asli saat portofolio siap.</p>
+      </div>
+    </section>
+
+    <!-- Bagian kontak -->
+    <section class="contact section-space" id="kontak">
+      <div class="container contact-panel">
+        <p class="eyebrow">PUNYA IDE ATAU PROYEK?</p>
+        <h2>Mari berkolaborasi.</h2>
+        <p>Saya terbuka untuk belajar, bertukar ide, dan mengerjakan hal kreatif bersama.</p>
+        <a class="button button-light" href="mailto:gilangaryap">Hubungi Saya <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer dan tautan sosial -->
+  <footer class="footer" id="footer">
+    <div class="container footer-inner">
+      <a class="footer-name" href="#beranda">GAP<span>.</span></a>
+      <p>© <span id="year"></span> Gilang Arya Prasetyo. Dibuat dengan kreativitas.</p>
+      <a class="instagram-link" href="#kontak" aria-label="Instagram dan informasi kontak">
+        <!-- Ikon Instagram sederhana berbentuk SVG -->
+        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+          <circle cx="12" cy="12" r="4"></circle>
+          <circle class="instagram-dot" cx="17.5" cy="6.8" r="1"></circle>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Menghubungkan file JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* =========================================================
+   GAYA UTAMA — variabel warna, ukuran, dan font
+   ========================================================= */
+:root {
+  --warna-utama: #d9001b;
+  --warna-hitam: #080808;
+  --warna-putih: #ffffff;
+  --warna-abu: #f3f3f3;
+  --warna-teks: #171717;
+  --warna-redup: #6e6e6e;
+  --font-judul: "Bree Serif", Georgia, serif;
+  --font-isi: "Nunito", Arial, sans-serif;
+  --radius-kartu: 18px;
+  --lebar-konten: 1080px;
+}
+
+/* Reset ringan agar ukuran elemen lebih konsisten */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0;
+  color: var(--warna-teks);
+  background: var(--warna-putih);
+  font-family: var(--font-isi);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.container { width: min(var(--lebar-konten), calc(100% - 48px)); margin-inline: auto; }
+
+/* =========================================================
+   NAVIGASI — tombol hitam membulat seperti referensi
+   ========================================================= */
+.site-header { padding: 22px 0 12px; }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.nav-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 43px;
+  padding: 10px 22px;
+  border-radius: 11px;
+  background: var(--warna-hitam);
+  color: var(--warna-putih);
+  font-size: 15px;
+  font-weight: 900;
+  transition: transform .2s ease, background .2s ease;
+}
+.nav-link:hover, .nav-link.active { background: var(--warna-utama); transform: translateY(-2px); }
+
+/* =========================================================
+   HERO — judul merah, deskripsi hitam, dan foto profil bulat
+   ========================================================= */
+.hero { padding-top: 45px; min-height: 550px; }
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--warna-redup);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+.hero h1 {
+  margin: 0;
+  color: var(--warna-utama);
+  font-family: var(--font-judul);
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1.06;
+  text-transform: uppercase;
+  letter-spacing: .015em;
+}
+.hero-subtitle {
+  margin: 7px 0 0;
+  color: var(--warna-utama);
+  font-family: var(--font-judul);
+  font-size: clamp(22px, 3.4vw, 36px);
+}
+.hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: 34px;
+  margin-top: 34px;
+}
+.intro-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.intro-card {
+  max-width: 700px;
+  margin: 0;
+  padding: 16px 19px;
+  border-radius: 0 0 17px 17px;
+  background: var(--warna-hitam);
+  color: var(--warna-putih);
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 800;
+  line-height: 1.36;
+}
+.portrait-frame {
+  width: 210px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 7px solid #fff0f1;
+  border-radius: 50%;
+  background: var(--warna-utama);
+  box-shadow: 0 10px 28px #d9001b20;
+}
+.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 48px;
+  padding: 12px 23px;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 900;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.button:hover { transform: translateY(-3px); box-shadow: 0 8px 18px #0002; }
+.button-dark { background: var(--warna-hitam); color: var(--warna-putih); }
+.button span { font-size: 18px; }
+
+/* =========================================================
+   JUDUL SECTION DAN TENTANG SAYA
+   ========================================================= */
+.section-space { padding: 76px 0; }
+.section-title {
+  display: inline-block;
+  min-width: 220px;
+  padding: 8px 26px 10px;
+  border-radius: 12px;
+  background: var(--warna-hitam);
+  text-align: center;
+}
+.section-title h2 {
+  margin: 0;
+  color: var(--warna-utama);
+  font-family: var(--font-judul);
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: 38px;
+  align-items: center;
+  margin-top: 24px;
+}
+.about-copy { margin: 0 0 20px; font-size: clamp(17px, 2vw, 22px); line-height: 1.48; }
+.about-note {
+  position: relative;
+  padding: 24px;
+  border: 1px solid #e8e8e8;
+  border-radius: var(--radius-kartu);
+  background: #fafafa;
+}
+.note-mark { color: var(--warna-utama); font-family: var(--font-judul); font-size: 54px; line-height: .7; }
+.about-note p { margin: 10px 0 14px; font-family: var(--font-judul); font-size: 21px; line-height: 1.35; }
+.note-caption { color: var(--warna-redup); font-size: 12px; font-weight: 800; }
+
+/* =========================================================
+   SKILL — daftar aplikasi dalam bentuk chip
+   ========================================================= */
+.skills { background: var(--warna-abu); }
+.section-lead { max-width: 600px; margin: 17px 0 24px; color: var(--warna-redup); font-size: 15px; }
+.skill-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.skill-chip {
+  padding: 12px 19px;
+  border: 1px solid #dedede;
+  border-radius: 999px;
+  background: var(--warna-putih);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+/* =========================================================
+   KARYA — kartu contoh yang bisa diganti dengan gambar proyek
+   ========================================================= */
+.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.work-card { min-width: 0; padding: 15px; border-radius: 17px; }
+.work-red { background: #f8e5e7; }
+.work-cream { background: #f1eee6; }
+.work-dark { background: #171717; color: white; }
+.work-number { font-size: 9px; font-weight: 900; letter-spacing: .12em; }
+.work-art {
+  display: flex;
+  position: relative;
+  min-height: 205px;
+  margin: 14px 0;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.identity-art { background: var(--warna-utama); color: white; }
+.identity-art span { font-family: var(--font-judul); font-size: 115px; line-height: 1; }
+.identity-art i { position: absolute; right: 13px; bottom: 13px; font-size: 10px; font-style: normal; font-weight: 900; text-align: right; }
+.poster-art { flex-direction: column; align-items: flex-start; padding: 18px; background: #f4c94f; color: #111; }
+.poster-art b { font-family: var(--font-judul); font-size: clamp(34px, 4vw, 55px); line-height: .86; }
+.poster-art em { color: var(--warna-utama); font-style: normal; }
+.poster-art small { margin-top: 18px; font-size: 8px; font-weight: 900; letter-spacing: .2em; }
+.digital-art { flex-direction: column; gap: 0; background: #303b69; color: #f2d8ff; font-family: var(--font-judul); }
+.digital-art span { font-size: 46px; letter-spacing: .1em; }
+.digital-art b { color: #f5b9c9; font-size: 48px; line-height: .8; }
+.digital-art i { color: #f6d36d; font-size: 29px; font-style: normal; letter-spacing: .2em; }
+.work-card h3 { margin: 12px 0 4px; font-size: 18px; }
+.work-card p { margin: 0; color: inherit; opacity: .72; font-size: 13px; line-height: 1.5; }
+.work-disclaimer { margin: 15px 0 0; color: var(--warna-redup); font-size: 11px; }
+
+/* =========================================================
+   KONTAK DAN FOOTER
+   ========================================================= */
+.contact { padding-top: 30px; }
+.contact-panel {
+  padding: clamp(28px, 6vw, 58px);
+  border-radius: 22px;
+  background: var(--warna-utama);
+  color: white;
+  text-align: center;
+}
+.contact-panel .eyebrow { color: #ffffffb8; }
+.contact-panel h2 { margin: 5px 0 10px; font-family: var(--font-judul); font-size: clamp(32px, 5vw, 52px); }
+.contact-panel p:not(.eyebrow) { margin: 0 auto 22px; max-width: 500px; color: #ffffffdc; }
+.button-light { background: white; color: var(--warna-hitam); }
+.footer { margin-top: 35px; padding: 22px 0; background: #dedede; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.footer-name { font-family: var(--font-judul); font-size: 25px; }
+.footer-name span { color: var(--warna-utama); }
+.footer p { margin: 0; color: #555; font-size: 11px; text-align: center; }
+.instagram-link { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: linear-gradient(35deg, #ffbd45, #ff267d 55%, #783bdb); }
+.instagram-link svg { width: 25px; fill: none; stroke: white; stroke-width: 1.8; }
+.instagram-link .instagram-dot { fill: white; stroke: none; }
+
+/* =========================================================
+   RESPONSIF — penyesuaian untuk tablet dan ponsel
+   ========================================================= */
+@media (min-width: 1100px) {
+  .hero { padding-top: 65px; min-height: 620px; }
+  .hero-content { grid-template-columns: minmax(0, 1fr) 270px; gap: 55px; margin-top: 48px; }
+  .portrait-frame { width: 250px; }
+  .section-space { padding-block: 95px; }
+}
+@media (max-width: 650px) {
+  .container { width: calc(100% - 32px); }
+  .site-header { padding-top: 18px; }
+  .nav { gap: 8px; }
+  .nav-link { min-height: 39px; padding: 9px 12px; border-radius: 9px; font-size: 12px; }
+  .hero { min-height: auto; padding-top: 35px; padding-bottom: 70px; }
+  .eyebrow { font-size: 8px; }
+  .hero h1 { font-size: clamp(32px, 8.2vw, 47px); }
+  .hero-subtitle { font-size: 23px; }
+  .hero-content { grid-template-columns: 1fr 112px; gap: 10px; margin-top: 28px; }
+  .intro-card { padding: 12px 11px; border-radius: 0 0 13px 13px; font-size: 14px; line-height: 1.38; }
+  .intro-wrap { gap: 14px; }
+  .portrait-frame { width: 112px; border-width: 4px; }
+  .button { min-height: 43px; padding: 10px 16px; font-size: 12px; }
+  .section-space { padding: 54px 0; }
+  .section-title { min-width: 185px; padding: 8px 18px; }
+  .section-title h2 { font-size: 29px; }
+  .about-grid { grid-template-columns: 1fr; gap: 22px; margin-top: 18px; }
+  .about-copy { font-size: 17px; line-height: 1.48; }
+  .about-note { padding: 20px; }
+  .about-note p { font-size: 19px; }
+  .section-lead { font-size: 13px; }
+  .skill-list { gap: 8px; }
+  .skill-chip { padding: 10px 14px; font-size: 12px; }
+  .work-grid { grid-template-columns: 1fr; gap: 14px; }
+  .work-card { padding: 13px; }
+  .work-art { min-height: 190px; }
+  .poster-art b { font-size: 54px; }
+  .footer-inner { flex-wrap: wrap; justify-content: center; }
+  .footer p { order: 3; flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* Mengurangi animasi bagi pengunjung yang memilih gerakan minimal */
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
